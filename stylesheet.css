@@ -1,0 +1,306 @@
+        /*
+ * Base structure
+ */
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    
+    body {
+        padding-top: 50px;
+    }
+    /*
+ * Typography
+ */
+    
+    h1 {
+        margin-bottom: 20px;
+        padding-bottom: 9px;
+        border-bottom: 1px solid #eee;
+    }
+    /*
+ * Sidebar
+ */
+    
+    .sidebar {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+        border-right: 1px solid #eee;
+    }
+    /* Sidebar navigation */
+    
+    .sidebar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .sidebar .nav {
+        margin-bottom: 20px;
+    }
+    
+    .sidebar .nav-item {
+        width: 100%;
+    }
+    
+    .sidebar .nav-item+.nav-item {
+        margin-left: 0;
+    }
+    
+    .sidebar .nav-link {
+        border-radius: 0;
+    }
+    
+    .bg-faded {
+        background-color: #f7f7f7;
+    }
+    
+    .sidebar-right {
+        position: fixed;
+        top: 51px;
+        bottom: 0;
+        right: 0;
+        z-index: 1000;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        /* Scrollable contents if viewport is shorter than content. */
+        border-right: 1px solid #eee;
+    }
+    /*
+ * Dashboard
+ */
+    /* Placeholders */
+    
+    .placeholders {
+        padding-bottom: 3rem;
+    }
+    
+    .placeholder img {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    /*other*/
+    
+    #current-folder,
+    #zip-items {
+        max-height: 35%;
+        overflow: scroll;
+    }
+    
+    #zip-item {
+        cursor: default;
+    }
+    
+    #zip-item:hover {
+        opacity: 1;
+    }
+    
+     ::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .download-click {
+        margin: 10px;
+    }
+    
+    #folder-name {
+        margin-right: 10px;
+    }
+    
+    .table {
+        text-align: left!Important;
+    }
+    
+    .navItem: hover {
+        color: white;
+    }
+    
+    .bg-dark {
+        background-color: blue!important;
+        color: white!important
+    }
+    
+    .fa-spin,
+    .fa-check,
+    .fa-warning,
+    .fa-download {
+        font-size: 100px;
+        cursor: pointer;
+    }
+    
+    .fa-window-close,
+    #title span {
+        cursor: pointer;
+    }
+    
+    #title span:hover,
+    #title span:active {
+        color: blue;
+    }
+    
+    .fa-window-close:hover {
+        color: blue;
+    }
+    
+    .fa-spin,
+    .menu-icon {
+        color: blue;
+    }
+    
+    .fa-download {
+        color: grey;
+    }
+    
+    .fa-check {
+        color: green;
+    }
+    
+    .selected {
+        background-color: #EEEEEE;
+    }
+    
+    #info-icon {
+        cursor: default;
+    }
+    
+    .file-item:hover {
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    
+    .fa-warning {
+        color: red;
+    }
+    
+    #search {
+        color: blue;
+        background-color: #f7f7f7;
+    }
+    /*animations */
+    
+    .animate-bottom {
+        position: relative;
+        -webkit-animation-name: animatebottom;
+        -webkit-animation-duration: 1s;
+        animation-name: animatebottom;
+        animation-duration: 1s
+    }
+    
+    @-webkit-keyframes animatebottom {
+        from {
+            bottom: -100px;
+            opacity: 0
+        }
+        to {
+            bottom: 0px;
+            opacity: 1
+        }
+    }
+    
+    @keyframes animatebottom {
+        from {
+            bottom: -100px;
+            opacity: 0
+        }
+        to {
+            bottom: 0;
+            opacity: 1
+        }
+    }
+    
+    //snackbar
+    #snackbar {
+        visibility: hidden;
+        min-width: 250px;
+        margin-left: -125px;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 16px;
+        position: fixed;
+        z-index: 1;
+        left: 50%;
+        bottom: 30px;
+        font-size: 17px;
+    }
+    
+    #snackbar.show {
+        visibility: visible;
+        -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    }
+    
+    @-webkit-keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadein {
+        from {
+            bottom: 0;
+            opacity: 0;
+        }
+        to {
+            bottom: 30px;
+            opacity: 1;
+        }
+    }
+    
+    @-webkit-keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+    
+    @keyframes fadeout {
+        from {
+            bottom: 30px;
+            opacity: 1;
+        }
+        to {
+            bottom: 0;
+            opacity: 0;
+        }
+    }
+    /* Small devices (landscape phones, 544px and up) */
+    
+    @media (min-width: 544px) {
+        .class-name {
+            font-size: 16px;
+        }
+    }
+    /* Medium devices (tablets, 768px and up) */
+    
+    @media (min-width: 768px) {
+        .class-name {
+            font-size: 30px;
+        }
+    }
+    /* Large devices (desktops, 992px and up) */
+    
+    @media (min-width: 992px) {
+        .class-name {
+            font-size: 40px;
+        }
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {
+            .class-name {
+                font-size: 48px;
+            }
+        }
